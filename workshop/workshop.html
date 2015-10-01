@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<title>Workshop</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-controller="userCtrl as ctrl">
+
+	<div class="block userInfo" ng-show="ctrl.hideInfo">
+		<h1>User Info</h1>
+		<h3>First Name: <span ng-bind="ctrl.person.fname"></span> </h3>
+		<h3>Last Name: <span ng-bind="ctrl.person.lname"></span> <h3>
+		<h3>E-mail: <span ng-bind="ctrl.person.email"></span></h3>
+		<button ng-click="ctrl.edit()">Edit</button>
+	</div>
+
+	<div class="block userInfoEdit" ng-show="ctrl.hideEdit">
+		<h1>User Info</h1>
+		<h3>First Name: <input type="text" ng-model="ctrl.fakePerson.fname"></input></h3>
+		<h3>Last Name: <input type="text" ng-model="ctrl.fakePerson.lname"> </input> <h3>
+		<h3>E-mail: <span ng-bind="ctrl.person.email"></span></h3>
+		<button ng-click="ctrl.done()">Done</button>
+		<button ng-click="ctrl.cancel()">Cancel</button>
+	</div>
+
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
