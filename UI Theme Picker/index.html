@@ -52,7 +52,7 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</div>  <!-- End Task 1 Section -->
 
 	<div ng-controller="Task_2_Controller as ctrl2" class="task2"> <!-- Section with Task 2 -->
 		<br>
@@ -61,19 +61,7 @@
 			<h2>My Files</h2>
 			<br>
 			<input type="checkbox" ng-model="ctrl2.showHide">Only Folders
-			<br>
-			<br>
-
-<!-- 		<ul class="listOfFiles" ng-repeat="item in ctrl2.foldersArray">
-				<li>
-					<p ng-bind="item"></p>
-					<ul ng-repeat="file in ctrl2.filesArray">
-						<li ng-hide="ctrl2.showHide">
-							<span ng-bind="file"></span>
-						</li>
-					</ul>
-				</li>
-			</ul> -->
+			<br><br>
 
 			<ul class="listOfFiles" ng-repeat="item in ctrl2.foldersArray">
 				<li>
@@ -89,14 +77,13 @@
 			<h2>Add Files</h2>
 			<br>
 			<input type="text" ng-model="ctrl2.file"><button ng-click="ctrl2.AddToFolder()">Add Me</button>
-			<br>
-			<br>
+			<br><br>
 			<input type="radio" ng-value="0" ng-model="ctrl2.position"  name="folder">Folder 1
 			<input type="radio" ng-value="1" ng-model="ctrl2.position" name="folder">Folder 2
 			<input type="radio" ng-value="2" ng-model="ctrl2.position" name="folder">Folder 3
 		</div>
 
-	</div> <!-- End Task 1 Section -->
+	</div> <!-- End Task 2 Section -->
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
