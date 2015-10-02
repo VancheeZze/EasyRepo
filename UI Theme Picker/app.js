@@ -42,9 +42,6 @@ var self = this;
 var self = this;
 self.position = 0;
 
-// self.foldersArray = ['Folder 1', 'Folder 2', 'Folder 3'];
-// self.filesArray = ['File 1', 'File 2'];
-
 self.foldersArray = [{name: 'Folder 1',
 					  files: ['File 1', 'File 2 ']
 					 },
