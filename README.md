@@ -1,2 +1,2 @@
 # EasyRepo
-Angular 2.0
+AngularJs
