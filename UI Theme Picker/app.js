@@ -53,7 +53,7 @@ self.foldersArray = [{name: 'Folder 1',
 					}];
 
 self.AddToFolder = function() {
-	self.foldersArray[self.position].files.push(" " + this.file + ' ');
+	self.foldersArray[self.position].files.push(" " + self.file + ' ');
 	self.file = '';
 };
 
