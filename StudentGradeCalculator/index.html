@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Student Grade Calculator</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body ng-controller="gradeController as ctrl">
+
+	<!-- =========================== INPUT =========================== -->
+	<div class="wrap">
+		<div class="input">
+			<form name="studInput" class="studInput">
+				<div class="field">
+					<label>Student Name: </label>
+					<input type="text" ng-model="ctrl.student.userName" placeholder="Ivan Rudyuk" required></input>
+				</div>
+
+				<div class="field">
+					<label>Assigment Name: </label>
+					<input type="text" ng-model="ctrl.student.assName" placeholder="Assigment #" required></input>
+				</div>
+
+				<div class="field">
+					<label>Assigment Score: </label>
+					<input type="number"
+							ng-model="ctrl.student.assScore"
+							placeholder="100"
+							max="100"
+							min="0"
+							required>
+					</input>
+					/100
+				</div>
+				
+				<button ng-show="studInput.$valid" ng-click="ctrl.student.submitScore(ctrl.student.assName, ctrl.student.assScore, studInput.$valid)">Add</button>
+			</form>
+		</div>
+		
+		<!-- =========================== STATUS =========================== -->
+
+		<div class="status" ng-hide="ctrl.student.hideInfo">
+			<hr>
+
+			<span>Average: </span><span class="bold" ng-bind="ctrl.student.average | number:1"></span>
+			<span>Grade: </span><span class="bold" ng-bind="ctrl.student.grade"></span>
+			<span>Passed: </span><span class="bold" ng-bind="ctrl.student.pass"></span>
+
+			<hr>
+		</div>
+	</div>
+
+		<!-- =========================== OUTPUT =========================== -->
+	<div class="outputWrap">
+		<div class="output" ng-repeat="item in ctrl.student.grades" ng-hide="ctrl.student.hideInfo">
+			<div class="info">
+				<span ng-bind="item.name" class="bold"></span><br>
+				<span>Assigment Score: </span><span ng-bind="item.score" class="bold"></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="controllers.js"></script>
+	<script src="services.js"></script>
+</body>
+</html>

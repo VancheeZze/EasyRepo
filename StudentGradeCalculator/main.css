@@ -1,0 +1,118 @@
+body {
+	background-color: #f6f8f8;
+    color: #5C5D5D;
+}
+
+.ng-valid{
+    background-color: rgba(173, 255, 198, 0.2);
+    border: 1px solid #66FF66;
+    outline-color: #66FF66;
+}
+.ng-invalid{
+    background-color: rgba(255, 195, 195, 0.2);
+    border: 1px solid #D89797;
+    outline-color: #D89797;
+}
+
+.ng-pristine{
+    background-color: #fff;
+    border: 1px solid #BBBBBB;
+}
+
+.studInput {
+    border: none; !important;
+    background-color: white; !important;
+}
+
+button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 75%;
+    line-height: 3;
+    padding: 0 2.5em;
+    background-color: #21abc7;
+    border: 1px solid #21abc7;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    float: right;
+}
+
+button:focus {
+	outline:none !important;
+}
+
+label,
+input[type=text] {
+    display: inline-block;
+    vertical-align: middle;
+}
+label {
+    width: 40%;
+}
+input {
+    padding: 5px;
+}
+
+input[type=text] {
+    width: 50%;
+}
+
+input[type=number] {
+    width: 15%;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.field {
+	padding: 5px;
+    margin: 5px;
+}
+
+.wrap {
+	display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 5%;
+    left: 37%;
+    background-color: #FFF;
+    width: 350px;
+    min-height: 150px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    border-radius: 8px;
+}
+
+.output {
+	display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    width: 350px;
+    min-height: 150px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    border-radius: 8px;
+}
+
+.status {
+	text-align: center;	
+	clear: both; 
+	padding-top: 5px;
+}
+
+.outputWrap {
+	margin: 0 auto;
+	position: absolute;
+    top: 37%;
+    width: 100%;
+    min-width: 1180px;
+    text-align: center;
+}
+
+.info {
+	padding-top: 11%;
+	font-size: 1.25em
+}

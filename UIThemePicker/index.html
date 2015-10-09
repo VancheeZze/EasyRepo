@@ -1,0 +1,111 @@
+<!doctype html>
+<html ng-app="App">
+<head>
+	<title>HomeWork1</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+	<div ng-controller="Task_1_Controller as ctrl" class="task1" ng-class="ctrl.userSelection.background_class"> <!-- Section with Task 1 -->
+		<br>
+		<h1>Task 1</h1>
+		<div class="control-panell"> 
+			<div class="btn" ng-class="ctrl.userSelection.btn_class">
+				<input 	type="radio" 
+						ng-value="ctrl.theme[0]" 
+						name="theme" 
+						ng-model="ctrl.userSelection"> Light
+			</div>
+			
+			<div class="btn" ng-class="ctrl.userSelection.btn_class">
+				<input 	type="radio" 
+						ng-value="ctrl.theme[1]" 
+						name="theme" 
+						ng-model="ctrl.userSelection"> Dark
+			</div>
+			
+			<div class="btn" ng-class="ctrl.userSelection.btn_class">
+				<input 	type="radio" 
+						ng-value="ctrl.theme[2]" 
+						name="theme" 
+						ng-model="ctrl.userSelection"> Crazy
+			</div>
+
+			<div class="btn" ng-class="ctrl.userSelection.btn_class">
+				<input 	type="radio" 
+						ng-value="ctrl.theme[3]" 
+						name="theme" 
+						ng-model="ctrl.userSelection"> Reset
+			</div>
+		</div> 
+
+		<div class="blocks">
+			<div class="text-block" ng-class="ctrl.userSelection.div_1_class">
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, provident excepturi voluptatem. Iusto officiis praesentium iure placeat ullam, nesciunt qui, dignissimos illum veniam aperiam ut dolorum, sapiente natus nobis totam?
+				</p>
+			</div>
+
+			<div class="text-block" ng-class="ctrl.userSelection.div_2_class">
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis reiciendis assumenda placeat, impedit animi at. Quas cupiditate, voluptatum inventore. Esse inventore, laboriosam reprehenderit possimus asperiores ipsam blanditiis autem ipsum molestiae!
+				</p>
+			</div>
+		</div>
+<<<<<<< HEAD:UIThemePicker/index.html
+	</div> <!-- End Task 2 Section -->
+=======
+	</div>  <!-- End Task 1 Section -->
+>>>>>>> 3b5b893d3cf6417e6cba73025a2b1e5e12172d40:UI Theme Picker/index.html
+
+	<div ng-controller="Task_2_Controller as ctrl" class="task2"> <!-- Section with Task 2 -->
+		<br>
+		<h1>Task 2</h1>
+		<div class="files">
+			<h2>My Files</h2>
+			<br>
+<<<<<<< HEAD:UIThemePicker/index.html
+			<input type="checkbox" ng-model="ctrl.showHide">Only Folders
+=======
+			<input type="checkbox" ng-model="ctrl2.showHide">Only Folders
+>>>>>>> 3b5b893d3cf6417e6cba73025a2b1e5e12172d40:UI Theme Picker/index.html
+			<br><br>
+
+			<ul class="listOfFiles" ng-repeat="item in ctrl.foldersArray">
+				<li>
+					<h3 ng-bind="item.name"></h3>
+					<ul ng-repeat="fileName in item.files track by $index">
+<<<<<<< HEAD:UIThemePicker/index.html
+						<p class="mrg" ng-hide="ctrl.showHide" ng-bind="fileName"></p>
+=======
+						<p class="mrg" ng-hide="ctrl2.showHide" ng-bind="fileName"></p>
+>>>>>>> 3b5b893d3cf6417e6cba73025a2b1e5e12172d40:UI Theme Picker/index.html
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="files">
+			<h2>Add Files</h2>
+			<br>
+<<<<<<< HEAD:UIThemePicker/index.html
+			<input type="text" ng-model="ctrl.file"><button ng-click="ctrl.AddToFolder()">Add Me</button>
+			<br><br>
+			<input type="radio" ng-value="0" ng-model="ctrl.position"  name="folder">Folder 1
+			<input type="radio" ng-value="1" ng-model="ctrl.position" name="folder">Folder 2
+			<input type="radio" ng-value="2" ng-model="ctrl.position" name="folder">Folder 3
+=======
+			<input type="text" ng-model="ctrl2.file"><button ng-click="ctrl2.AddToFolder()">Add Me</button>
+			<br><br>
+			<input type="radio" ng-value="0" ng-model="ctrl2.position"  name="folder">Folder 1
+			<input type="radio" ng-value="1" ng-model="ctrl2.position" name="folder">Folder 2
+			<input type="radio" ng-value="2" ng-model="ctrl2.position" name="folder">Folder 3
+>>>>>>> 3b5b893d3cf6417e6cba73025a2b1e5e12172d40:UI Theme Picker/index.html
+		</div>
+
+	</div> <!-- End Task 2 Section -->
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
