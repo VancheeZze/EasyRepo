@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Student Grade Calculator</title>
 	<link rel="stylesheet" type="text/css" href="main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="controllers.js"></script>
+	<script src="services.js"></script>
 </head>
 <body ng-controller="gradeController as ctrl">
 
@@ -49,9 +52,9 @@
 			<hr>
 		</div>
 	</div>
-
 		<!-- =========================== OUTPUT =========================== -->
 	<div class="outputWrap">
+		<hr ng-hide="ctrl.student.hideInfo">
 		<div class="output" ng-repeat="item in ctrl.student.grades" ng-hide="ctrl.student.hideInfo">
 			<div class="info">
 				<span ng-bind="item.name" class="bold"></span><br>
@@ -60,8 +63,5 @@
 		</div>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-	<script src="controllers.js"></script>
-	<script src="services.js"></script>
 </body>
 </html>
