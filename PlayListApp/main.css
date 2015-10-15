@@ -1,0 +1,68 @@
+body {
+	background-color: #A5C7D8;
+	color: #5C5D5D;
+	font-family: monospace;
+    font-size: 1.2em;
+    margin: 0px;
+}
+
+ul {
+	list-style-type: none;
+	text-align: justify;
+}
+
+ul li {
+	padding: 5px;
+}
+
+button {
+	padding: 10px;
+    width: 100px;
+    margin: 3px;
+}
+
+input[type="radio"]:hover:disabled {
+	cursor:  wait;
+}
+
+.top-section {
+	background-color: #f6f8f8;
+	border-bottom: 1px solid #BBB5B5;
+	overflow: hidden;
+
+	-webkit-box-shadow: 0px 10px 9px -10px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 10px 9px -10px rgba(0,0,0,0.5);
+	box-shadow: 0px 10px 9px -10px rgba(0,0,0,0.5);
+}
+
+.bot-section {
+	overflow: scroll;
+}
+
+.wrap {
+	width: 900px;
+	min-width: 500px;
+	padding-left: 6%;
+	margin: 0 auto;
+}
+
+.block {
+	display: inline-block;
+	width: 40%;
+	height: 280px;
+	float: left;
+    text-align: center;
+}
+
+.songs {
+	width: 80%;
+	overflow: scroll;
+}
+
+.output {
+	clear: both;
+}
+
+.clrfix {
+	clear: both;
+}

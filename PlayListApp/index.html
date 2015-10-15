@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Playlist App</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="controllers.js"></script>
+	<script src="services.js"></script>
+</head>
+<body ng-controller="playlistController as ctrl">
+
+<div ng-style="ctrl.music.top_section" class="top-section">
+<div class="wrap">
+	<div class="block input">
+		<h2>About Me</h2>
+		<h3>Name</h3><input type="text" placeholder="Name" ng-model="ctrl.userName"></input>
+		<h3>Age</h3><input type="number" placeholder="Age" ng-model="ctrl.music.userAge"></input>
+	</div>
+
+	<div class="block genre">
+		<h2>Genre</h2>
+		<input type="radio" name="genre" ng-value="0" ng-model="ctrl.music.genreNum">Pop
+		<input type="radio" name="genre" ng-value="1" ng-model="ctrl.music.genreNum">Rock	
+		<input type="radio" name="genre" ng-value="2" ng-model="ctrl.music.genreNum">Rap
+
+		<div class="explicit">
+			<h2>Allow Explicit</h2>
+			<input type="radio" name="explicit" ng-value="false" ng-model="ctrl.music.explicit">Clean
+			<input type="radio" name="explicit" ng-value="true" ng-model="ctrl.music.explicit" ng-disabled="ctrl.music.allowExp()">Explicit {{ctrl.music.botSectionSize}}
+		</div>
+	</div>
+
+	<div class="block songs">
+		<h2>Songs:</h2>
+		<ul>
+			
+			<li ng-repeat="item in ctrl.music.musicArray[ctrl.music.genreNum].titles"><input type="checkbox" ng-model="item.userSelection">{{item.title}}</input></li>
+		</ul>
+
+		<button ng-click="ctrl.music.submit(ctrl.userSelection, ctrl.music.explicit)">Add</button>
+	</div>
+	<div class="clrfix"></div>
+</div> <!-- End Wrap -->
+</div> <!-- End Section 1 -->
+<div ng-style="ctrl.music.bot_section" class="bot-section">	
+	<div class="output" ng-show="ctrl.music.selectedArray.length">
+		<pre>{{ctrl.music.selectedArray | json}}</pre>
+	</div>
+</div>
+
+</body>
+</html>
