@@ -75,11 +75,7 @@ self.foldersArray = [{name: 'Folder 1',
 					}];
 
 self.AddToFolder = function() {
-<<<<<<< HEAD:UIThemePicker/app.js
-	self.foldersArray[self.position].files.push(self.file);
-=======
 	self.foldersArray[self.position].files.push(" " + self.file + ' ');
->>>>>>> 3b5b893d3cf6417e6cba73025a2b1e5e12172d40:UI Theme Picker/app.js
 	self.file = '';
 };
 
