@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Simon Game</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="controller.js"></script>
+	<!-- <script src="services.js"></script> -->
+</head>
+<body ng-controller="SimonController as ctrl">
+	
+	<div onmousedown="return false" onselectstart="return false" class="settings-btn" ng-hide="ctrl.options.showSettings" ng-click="ctrl.showSettings()">
+		<span>Settings</span>
+	</div>
+
+	<div onmousedown="return false" onselectstart="return false" class="settings" ng-show="ctrl.options.showSettings">
+		<div class="settings-btn" ng-click="ctrl.hideSettings()">
+			<span class="x-marker" onmousedown="return false" onselectstart="return false">X</span>
+			
+			<div class="settings-speed">
+									<input type="number"
+							ng-model="ctrl.student.assScore"
+							placeholder="100"
+							max="100"
+							min="0"
+							required>
+					</input>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="gameBoard" onmousedown="return false" onselectstart="return false" ng-hide="ctrl.gameOver">
+		<div ng-class="{'lit' : ctrl.green}" class="blink square green" ng-click="ctrl.userGo('green')"></div>
+		<div ng-class="{'lit' : ctrl.red}" class=" blink square red" ng-click="ctrl.userGo('red')"></div>
+		<div ng-class="{'lit' : ctrl.yellow}" class=" blink square yellow" ng-click="ctrl.userGo('yellow')"></div>
+		<div ng-class="{'lit' : ctrl.blue}" class=" blink square blue" ng-click="ctrl.userGo('blue')"></div>
+
+		<div class="disabled" ng-show="ctrl.options.isDisabled"></div>
+
+		<div class="info" ng-hide="ctrl.options.newGame">
+			<span ng-bind="ctrl.options.gameScore"></span>
+			<span ng-bind="ctrl.whosTurn"></span>
+		</div>
+
+		<button  class="btn-start" ng-show="ctrl.options.newGameBtn" ng-click="ctrl.newGame()">New Game</button>
+	</div>
+
+	<div class="modal" ng-show="ctrl.gameOver">
+		<h2>Game Over!</h2>
+		<h3>Your Score is: <span ng-bind="ctrl.options.gameScore"></span></h3>
+		<button ng-click="ctrl.close()">Close</button>
+	</div>
+
+
+	<br>
+
+	<div class="simon-mooves simon-output">
+		<h3 ng-show="ctrl.options.userMoves.length">Your Moves</h3>
+		<ul>
+			<li ng-repeat="item in ctrl.options.userMoves track by $index">{{$index+1}}: {{item}}</li>
+		</ul>
+	</div>
+
+<!-- 	<div class="simon-mooves simon-output">
+		<h3 ng-show="ctrl.options.simonMoves.length">Simon Moves</h3>
+		<ul>
+			<li ng-repeat="item in ctrl.options.simonMoves track by $index">{{$index+1}} {{item}}</li>
+		</ul>
+	</div> -->
+
+</body>
+</html>
